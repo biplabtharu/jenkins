@@ -2,7 +2,7 @@ pipeline{
     agent none
     stages{
         stage('backend'){
-            agent{ docker{ image: 'node:alpine'}}
+            agent{ docker{ image 'node:alpine'}}
 
             steps{
                 sh "node --version"
@@ -10,14 +10,14 @@ pipeline{
         }
 
         stage('frontend'){
-            agent{docker{ image: 'node-alpine'}}
+            agent{docker{ image 'node:alpine'}}
             steps{
                 sh "node --version"
             }
         }
 
         stage('database'){
-            agent{docker{image: 'mysql'}}
+            agent{docker{image 'mysql'}}
             steps{
                 sh "select * from 1"
             }
