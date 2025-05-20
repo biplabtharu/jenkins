@@ -19,7 +19,7 @@ pipeline{
         stage('database'){
             agent{docker{image 'mysql'}}
             steps{
-                echo "select * from 1"
+                sh "echo mysql installed"
             }
         }
     }
