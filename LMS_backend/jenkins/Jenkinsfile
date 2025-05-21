@@ -1,8 +1,5 @@
 pipeline{
     agent{ docker{ image 'node:20'}}
-    environment{
-        
-    }
     stages{
         stage('Checkout'){
             steps{
