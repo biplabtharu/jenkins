@@ -10,7 +10,7 @@ pipeline{
         stage("Install deps"){
             steps{
                 dir("LMS_backend"){
-                    sh "npm install"
+                    sh "npm i"
                 }
             }
         }
