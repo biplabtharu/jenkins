@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    k8s-app: $APP_NAME
+  name: $APP_NAME
+  namespace: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      k8s-app: $APP_NAME
+  template:
+    metadata:
+      labels:
+        k8s-app: $APP_NAME
+    spec:
+      containers:
+        - image: $IMAGE
+          envFrom:
+            - configMapRef:
+                name: book-bolt-env
+          name: $APP_NAME
+          imagePullPolicy: Always
+      imagePullSecrets:
+        - name: $IMAGE_PULL_SECRET

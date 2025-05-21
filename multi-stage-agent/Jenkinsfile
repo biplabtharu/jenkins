@@ -1,7 +1,7 @@
 pipeline{
     agent none
     stages{
-        stage('backend'){
+        stage('java-backend'){
             agent{ docker{ image 'node:alpine'}}
 
             steps{

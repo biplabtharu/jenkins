@@ -1,0 +1,785 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  list-style-type: none;
+  text-decoration: none ;
+  /* overflow-y: hidden; */
+  /* overflow: hidden; */
+}
+
+a{
+  color: #000;
+} 
+
+
+/* --------------------------UTILITIES----------------- */
+.spinner{
+  width: 60px;
+  display: flex;
+  margin: auto;
+}
+
+.spinner_small{
+  width: 40px;
+}
+
+.spinner_smallest{
+  width: 20px;
+}
+.small_img{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  display: block;
+}
+
+.normal_p{
+  font-size: 17px;
+  word-spacing: 2px;
+  line-height: 24px;
+  text-align: justify;
+}
+.bold_p{
+  font-size: 17px;
+  font-weight: 600;
+    word-spacing: 2px;
+    line-height: 24px;
+    text-align: justify;
+}
+.large_p{
+  font-size: 20px;
+    word-spacing: 2px;
+    line-height: 24px;
+    text-align: justify;
+    font-weight: 600;
+}
+.medium_p{
+  font-size: 18px;
+    word-spacing: 2px;
+    line-height: 24px;
+    text-align: justify;
+    font-weight: 600;
+}
+.normal_bold_p{
+  font-size: 18px;
+  font-weight: 500;
+  color: #666666;
+  word-spacing: 2px;
+    line-height: 24px;
+}
+
+.small_bold_p{
+  font-size: 15px;
+  font-weight: 500;
+  color: #666666;
+}
+
+.small_p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #707070;
+}
+
+.nav_p{
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  transition: 0.3s all;
+}
+
+.nav_p a:hover{
+  color: rgb(255, 0, 0);
+  transition: 0.3s all;
+}
+
+.large_h{
+  font-size: 46px;
+  font-weight: 800;
+  color: rgb(36 62 99);
+  word-spacing: 3px;
+}
+
+.medium_h{
+  font-size: 40px;
+  font-weight: 800;
+    color: rgb(36 62 99);
+
+}
+.col_red{
+  color: rgb(100 21 255);
+}
+
+.small_h{
+  font-size: 22px;
+  font-weight: 800;
+  color: rgb(36 62 99);
+
+}
+
+.title_h{
+   color: rgb(100 21 255);
+   font-weight: 600;
+   font-size: 20px;
+   opacity: 1;
+  }
+  
+  
+  .btn{
+    padding: 10px 22px;
+    background-color: rgb(100 21 255);
+    color: #fff;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s all;
+    width: max-content;
+}
+
+.btn:hover{
+  background-color: rgb(71, 3, 206);
+  transition: 0.3s;
+  color: #fff;
+}
+
+.second_btn{
+  padding: 10px;
+    background-color: rgb(240, 240, 240);
+    color: #000;
+    font-size: 16px;
+    border: 1px solid rgb(230, 230, 230);
+    display: block;
+    border-radius: 4px;
+    width: 180px;
+    text-align: center;
+}
+.second_btn:hover{
+  background: transparent;
+  border: 1px solid rgb(211, 211, 211);
+  cursor: pointer;
+  transition: 0.3s;
+  color: #000;
+}
+
+.small_btn_del{
+  padding: 2px 5px;
+  background-color: rgb(224, 0, 0);
+  color: #000;
+  border: 1px solid rgb(230, 230, 230);
+  display: block;
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 13px;
+}
+.small_btn_edit {
+  padding: 2px 5px;
+  color: #fff;
+  background-color: rgb(0, 100, 17);
+  border: 1px solid rgb(230, 230, 230);
+  display: block;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.disabled_btn{
+    padding: 12px 30px;
+    background-color: rgb(223, 223, 223);
+    color: #000;
+    cursor: not-allowed;
+    width: max-content;
+      border-radius: 25px;
+}
+
+Table {
+  min-width: 100%;
+}
+
+Table Tbody Tr Td {
+  font-size: 14px;
+}
+
+Table Thead Tr Th {
+  width: max-content;
+}
+
+/* --------------------------NAVBAR------------------- */
+.navbar{
+  padding: 0 18%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+.nav_lists{
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.navbar_div{
+  display: flex;
+  gap: 60px;
+}
+
+.create_acc{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+/* ------------------------LANDING PAGE------------------ */
+.landing_page{
+  padding: 120px 18%;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.landing_header{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-basis: 60%;
+}
+
+
+.landing_page_wrapper{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.landing_img{
+  width: 480px;
+}
+
+.landing_img img{
+  width: 100%;
+  display: block;
+  margin-left: auto;
+}
+
+
+/* ------------------------ABOUT------------------- */
+.about_wrapper{
+  padding: 115px 18%;
+
+}
+
+.about_header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.about_p{
+  width: 500px;
+  text-align: center;
+}
+
+
+/* ----------------------------SINGLE BOOKS--------------- */
+.discover_books{
+  padding: 120px 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.book_selection{
+  display: flex;
+  gap: 30px;
+  
+}
+
+.book_detail_wrapper{
+  display: flex;
+  gap: 30px;
+  padding-top: 30px;
+}
+
+.books_wrapper {
+  padding: 50px 18%;
+}
+
+.books {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.book_detail{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px solid #cfcfcf;
+  padding: 30px 5px;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 220px;
+  justify-content: center;
+  align-items: center;
+  min-height: 252px;
+  transition: 0.5s all;
+}
+
+.book_detail:hover{
+  transition: 0.5s all;
+    border: 1px solid #adadad;
+    background-color: rgb(175, 176, 194);
+}
+
+.book_desc{
+  transition: 0.5s all;
+}
+
+.book_cover_img{
+  width: 140px;
+  border-radius: 5px;
+  display: block;
+  transition: 0.5s all;
+}
+.book_detail:hover .book_cover_img {
+  transform: scale(1.1);
+}
+
+.book_detail:hover .book_desc {
+  transform: translateY(-5px);
+  transition: 0.5s all;
+}
+.book_selection p{
+  cursor: pointer;
+  font-size: 18px;
+}
+
+
+
+/* --------------------STAY IN TOUCH-------------- */
+.stay_in_touch{
+margin: 120px 0;
+background: rgb(255, 0, 85);
+}
+
+.stay_in_touch_wrapper{
+  padding: 80px;
+  gap: 100px;
+  color: #fff;
+  width: 800px;
+  margin: auto;
+}
+
+.stay_in_touch_wrapper h1{
+  color: #fff;
+  font-weight: 500;
+  padding-bottom: 40px;
+}
+
+.stay_in_touch_input{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stay_in_touch_input input{
+  padding: 10px 15px;
+  width: 400px;
+  border: none;
+  outline: 0;
+  font-size: 16px;
+}
+
+.stay_in_touch_input div{
+  display: flex;
+  gap: 20px;
+}
+
+.stay_in_touch_wrapper p{
+  text-align: left;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.stay_checkbox{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: -40px;
+  color: #fff;
+}
+
+
+
+/* ---------------------FORM------------------ */
+
+
+form{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: max-content;
+  gap: 10px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 20px;
+
+}
+
+form div{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form label{
+  font-size: 18px;
+}
+form input{
+  width: 400px;
+  padding: 8px;
+  outline: 0;
+  border: 1px solid #b6b6b6;
+  border-radius: 5px;
+}
+::placeholder{
+  font-size: 16px;
+}
+
+form h3{
+  font-size: 30px;
+  font-weight: 700;
+}
+
+
+form button{
+  border: 0;
+  cursor: pointer;
+}
+
+
+
+/* ------------------BOOK DETAIL----------------- */
+
+.single_book_wrapper{
+  padding: 80px 15%; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+.single_book{
+  display: flex;
+  gap: 50px;
+  width: max-content;
+  padding: 50px;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.single_book img{
+  width: 260px;
+}
+
+.single_book_detail{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.single_book_detail span{
+  font-weight: 300;
+  padding-right: 10px;
+  text-transform: capitalize;
+  color: #302f2f;
+}
+
+
+
+/* ---------------------USER PAGE------------------ */
+
+.user_page_wrapper{
+  padding: 50px 18%;
+}
+
+.user_page{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.user_profile{
+  display: flex;
+  gap: 40px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.profile_pic{
+  width: 180px;
+  border-radius: 20px;
+
+}
+.user_details{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.third_btn{
+  border: 1px solid #fff;
+  padding: 4px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  min-width: 60px;
+  background-color: rgb(230, 230, 230);
+}
+
+.third_btn:hover{
+  transition: 0.3s;
+  border: 1px solid rgb(211, 211, 211);
+  background: transparent;
+}
+
+
+.book_history{
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+
+
+/* ---------------------ERROR PAGE------------------ */
+.not_found_wrapper{
+  padding: 100px 18%;
+}
+.not_found{
+  width: max-content;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.not_found_desc{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.not_found_desc p{
+  text-align: justify;
+}
+
+
+
+/* ------------------SEARCH-------------------------------- */
+
+.search_wrapper{
+  padding: 50px 18% 0 18%;
+}
+
+.search{
+  width: max-content;
+  margin: auto;
+}
+
+.search Input{
+  border: 1px solid rgb(85, 85, 85);
+}
+
+
+/* -----------------------------------ADMIN ------------------------------------ */
+
+.adm_navbar_wrapper{
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+
+.adm_navbar{
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.adm_navlists{
+  display: flex;
+  gap: 40px;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+/* --------------------------------TABLE--------------------- */
+.table_action{
+  display: flex;
+  width: max-content;
+  gap: 5px;
+  text-transform: capitalize;
+}
+
+/* -------------------------------BOOKS_-------------------------- */
+.adm_book_wrapper{
+  margin-top: 40px;
+}
+
+.adm_add_book_wrapper{
+  margin-top: 20px;
+}
+.adm_add_book{
+  width: max-content;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.status_true{
+  color: rgb(0, 136, 0);
+  font-weight: 500;
+}
+
+.status_false{
+color: rgb(172, 0, 0);
+font-weight: 500;
+}
+
+
+.genre_form{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.genre_form select{
+   padding: 8px;
+   border-radius: 10px;
+}
+
+
+.fine_amount{
+  border: 1px solid rgba(199, 0, 0, 0.712);
+  border-radius: 10px;
+  padding: 5px 10px;
+  height: max-content;
+}
+
+.inactive{
+  color: #000
+}
+
+.active{
+  color: red;
+}
+
+
+/* ------------------------------RULES----------------------- */
+.rules{
+  padding: 50px 18%;
+}
+
+.rules_wrapper h1{
+  padding-bottom: 20px;
+}
+
+.all_rules{
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.rules_heading{
+  font-size: 20px;
+  font-weight: 600;
+  padding: 20px;
+  background: #f0f0f0;
+ border-radius: 5px;
+ flex-basis: 25%;
+ min-height: 200px;
+ border-radius: 10px;
+box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+
+.rules_h1{
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: #636363;
+}
+
+.rules_h1{
+  padding-bottom: 10px;
+}
+
+
+
+/* -----------------------FOOTER---------------------- */
+.footer{
+  margin-top: 100px;
+  background: #5a5a5a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  color: #e7e7e7;
+  font-weight: 600;
+}
+
+
+/* --------------------PAGINATION------------------------- */
+
+.pagination{
+  display: flex; 
+  gap: 3px;
+  font-size: 14px;
+  justify-content: end;
+  align-items: center;
+  padding: 10px;
+}
+
+
+.page-item{
+  padding: 3px 8px;
+  background: rgb(230, 230, 230);
+  border-radius: 5px;
+}

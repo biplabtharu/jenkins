@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: $APP_NAME-service
+  namespace: dev
+spec:
+  ports:
+    - port: 3000
+      protocol: TCP
+      targetPort: 3000
+  selector:
+    k8s-app: $APP_NAME
+  type: ClusterIP

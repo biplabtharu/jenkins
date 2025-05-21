@@ -1,0 +1,27 @@
+version: "3.1"
+services:
+  mongo-db:
+    container_name: mongo-db
+    image: mongo:7.0.5
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: AeQVf3bgcZ
+    volumes:
+      - /Mongodb/data:/data/db # Please configure accordingly
+  book-bolt:
+    container_name: "book-bolt"
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    depends_on:
+      - mongo-db
+    ports:
+      - 3000:3000
+    environment:
+      - PORT=3000
+      - MONGO_URI=mongodb://root:AeQVf3bgcZ@mongo-db:27017?authSource=admin
+      - ACCESS_TOKEN_SECRET_KEY="THIS IS A TEST KEY"
+      - REFRESH_TOKEN_SECRET_KEY="THIS IS A TEST KEY"
