@@ -6,19 +6,23 @@ pipeline{
     stages{
         stage('Checkout'){
             steps{
-                git url: "https://github.com/biplabtharu/jenkins/backend" , branch: "main"
+                git url: "https://github.com/biplabtharu/jenkins/" , branch: "main"
             }
         }
 
         stage("Install deps"){
             steps{
-                sh "npm install"
+                dir("LMS_backend"){
+                    sh "npm install"
+                }
             }
         }
 
         stage ("Build"){
             steps{
-                sh "npm run build"
+                dir("LMS_backend"){
+                    sh "npm run build"
+                }
             }
         }
 
