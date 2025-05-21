@@ -10,7 +10,7 @@ pipeline{
         stage("Install dependencies"){
             steps{
                 dir("LMS_frontend"){
-                    sh "chown -R 141:153 '/.npm'"
+                    sh "chown -R 141:153 /.npm"
                     sh "npm install"
                 }
             }
