@@ -1,0 +1,33 @@
+pipeline{
+    agent{ docker{ image 'node:20'}}
+    stages{
+        stage('Checkout'){
+            steps{
+                git url: "https://github.com/biplabtharu/jenkins/" , branch: "main"
+            }
+        }
+
+        stage("Install deps"){
+            steps{
+                dir("LMS_frontend"){
+                    sh "npm i"
+                }
+            }
+        }
+
+         stage("Install deps"){
+            steps{
+                dir("LMS_frontend"){
+                    sh "npm run build"
+                }
+            }
+        }
+
+        stage("Test"){
+            steps{
+                echo "Testing stage occurs here"
+            }
+        }
+
+    }
+}
