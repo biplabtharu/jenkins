@@ -10,7 +10,7 @@ pipeline{
         stage("Install dependencies"){
             steps{
                 dir("LMS_frontend"){
-                    sh "npm cache clean --force"
+                    sh "chown -R 141:153 '/.npm'"
                     sh "npm install"
                 }
             }
