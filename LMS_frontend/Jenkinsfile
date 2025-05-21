@@ -1,5 +1,5 @@
 pipeline{
-    agent{ docker{ image 'node:18'}}
+    agent{ docker{ image 'node:16'}}
     stages{
         stage('Checkout'){
             steps{
@@ -10,8 +10,7 @@ pipeline{
         stage("Install dependencies"){
             steps{
                 dir("LMS_frontend"){
-                    sh 'sudo chown -R 141:153 "/.npm"'
-                    sh "npm i"
+                    sh "npm install"
                 }
             }
         }
