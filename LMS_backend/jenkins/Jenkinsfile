@@ -15,14 +15,6 @@ pipeline{
             }
         }
 
-        stage ("Build"){
-            steps{
-                dir("LMS_backend"){
-                    sh "npm run build"
-                }
-            }
-        }
-
         stage("Test"){
             steps{
                 echo "Testing stage occurs here"
