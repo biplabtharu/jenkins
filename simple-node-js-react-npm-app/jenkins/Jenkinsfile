@@ -9,7 +9,9 @@ pipeline{
     stages{
         stage('build'){
             steps{
-                sh "npm install"
+                dir('simple-node-js-react-npm-app'){
+                    sh "npm install"
+                }
             }
         }
     }
@@ -17,7 +19,9 @@ pipeline{
     stages{
         stage('test'){
             steps{
-                sh "./jenkins/scripts/test.sh"
+                dir('simple-node-js-react-npm-app'){
+                    sh "./jenkins/scripts/test.sh"
+                }
             }
         }
     }
