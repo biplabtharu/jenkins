@@ -7,6 +7,10 @@ pipeline{
     }
 
     stages{
+        stage('checkout'){
+            git url: "https://github.com/biplabtharu/jenkins/blob/main/simple-node-js-react-npm-app" branch: "main"
+        }
+
         stage('build'){
             steps{
                 dir('simple-node-js-react-npm-app'){
