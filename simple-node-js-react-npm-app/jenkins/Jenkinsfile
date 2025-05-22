@@ -14,9 +14,7 @@ pipeline{
                 }
             }
         }
-    }
 
-    stages{
         stage('test'){
             steps{
                 dir('simple-node-js-react-npm-app'){
