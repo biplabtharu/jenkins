@@ -4,12 +4,6 @@ pipeline{
         NPM_CONFIG_CACHE = "tmp/cache"
     }
     stages{
-        // stage('Checkout'){
-        //     steps{
-        //         git url: "https://github.com/biplabtharu/jenkins/" , branch: "main"
-        //     }
-        // }
-
         stage("Install deps"){
             steps{
                 dir("LMS_backend"){
@@ -18,11 +12,14 @@ pipeline{
             }
         }
 
-        stage("Test"){
+        stage("Create docker image"){
+            agent any 
             steps{
-                echo "Testing stage occurs here"
+                dir("LMS_backend"){
+                    echo "Creating docker image"
+                    sh "docker build -t LMS_backend:1.0.0 ."
+                }
             }
         }
-
     }
 }
