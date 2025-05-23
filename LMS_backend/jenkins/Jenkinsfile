@@ -1,23 +1,28 @@
 pipeline{
-    agent{ docker{ image 'node:20'}}
+    // agent{ docker{ image 'node:20'}}
     environment{
         NPM_CONFIG_CACHE = "tmp/cache"
     }
     stages{
-        stage("Install deps"){
-            steps{
-                dir("LMS_backend"){
-                    sh "npm i"
-                }
-            }
-        }
+        // stage("Install deps"){
+        //     steps{
+        //         dir("LMS_backend"){
+        //             sh "npm i"
+        //         }
+        //     }
+        // }
 
         stage("Create docker image"){
             agent any 
             steps{
                 dir("LMS_backend"){
                     echo "Creating docker image"
-                    sh "docker build -t LMS_backend:1.0.0 ."
+                    sh '''
+                    echo "User: $(whoami)"
+                    echo "HOME: $HOME"
+                    echo "npm cache location: $(npm config get cache)"
+                     docker build -t LMS_backend:1.0.0 .
+                '''
                 }
             }
         }
